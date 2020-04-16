@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>ステッチに使う糸の量を計算するツール</title>
+  </head>
+  <body>
+    <main>
+        
+        <section>
+            <h2>ステッチに使う糸の量を計算するツール</h2>
+        <form id="stach-form" onsubmit="inputData.calculation(event);">
+          <div class="group">
+            <label>布のカウントを入力してください</label>
+            <input id="count" name="count" type="number" class="field" />
+          </div>
+
+          <div class="group">
+            <label>縫う目の数を入力してください</label>
+            <input
+              id="stachArea"
+              name="stachArea"
+              type="number"
+              class="field"
+            />
+          </div>
+
+          <div class="group">
+            <label>何本取りかを指定してください</label>
+            <input id="strangs" name="strangs" type="number" class="field" />
+          </div>
+
+          <button id="calculation" type="submit">計算</button>
+        </form>
+      </section>
+
+      <!-- 結果表示フォーム -->
+      <section>
+        <table>
+          <thead>
+            <tr>
+              糸の量
+              <td>総量(cm)</td>
+              <td>6本取り(m)</td>
+              <td>かせ</td>
+            </tr>
+          </thead>
+
+          <tbody class="strangsValume">
+            <tr class="strangs">
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <script src="js/Calculation.js"></script>
+    <script src="js/Controller.js"></script>
+    <script src="js/View.js"></script>
+
+    <script>
+      var inputData = new InputData();
+    </script>
+  </body>
+</html>
