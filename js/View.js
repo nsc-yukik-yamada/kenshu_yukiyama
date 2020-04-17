@@ -4,17 +4,18 @@ class View {
   }
 
   _makeDocument(strangs) {
-    console.log(`viaw = ${strangs}`);
+    console.log(" _makeDocument");
+    console.log(strangs);
     let tr = document.createElement("tr");
 
     let tdLongCm = document.createElement("td");
-    tdLongCm.textContent = strangs;
+    tdLongCm.textContent = strangs.StrangsLong;
 
     let tdLongM = document.createElement("td");
-    tdLongM.textContent = strangs / 6 / 100;
+    tdLongM.textContent = strangs.StrangsSet;
 
     let tdLongKase = document.createElement("td");
-    tdLongKase.textContent = strangs / 6 / 100 / 8;
+    tdLongKase.textContent = strangs.Kase;
     tr.appendChild(tdLongCm);
     tr.appendChild(tdLongM);
     tr.appendChild(tdLongKase);
@@ -22,8 +23,7 @@ class View {
     this._strangsView.appendChild(tr);
   }
 
-  clear(){
+  clear() {
     this._strangsView.innerHTML = " ";
-
   }
 }

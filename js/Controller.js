@@ -23,12 +23,18 @@ class InputData {
 
     console.log(this._stach);
 
-    
     // 糸の長さを計算して変数に格納
     let strangsLongCm = this._stach.coleculation();
 
-    console.log(this._stachView );
+    // console.log(this._stachView);
+
+    // 長さの計算
+    let strangs = new StrangsLong();
+    strangs.keisan(strangsLongCm);
+    console.log();
+
+    // 画面に表示
     this._stachView.clear();
-    this._stachView._makeDocument(strangsLongCm);
+    this._stachView._makeDocument(strangs);
   }
 }
